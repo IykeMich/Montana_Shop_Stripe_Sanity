@@ -31,7 +31,7 @@ export default function AddToBag({
   return (
     <Button
       onClick={() => {
-        addItem(product), handleCartClick();
+        addItem(product); handleCartClick();
       }}
     >
       Add to Cart{" "}
