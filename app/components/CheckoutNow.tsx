@@ -14,6 +14,7 @@ export default function CheckoutNow({
   price_id,
 }: ProductCart) {
   const { checkoutSingleItem } = useShoppingCart();
+  
   function buyNow(priceId: string) {
     checkoutSingleItem(priceId)
   }
@@ -27,11 +28,12 @@ export default function CheckoutNow({
   };
   return (
     <Button
+    variant={"outline"}
       onClick={() => {
         buyNow(product.price_id);
       }}
     >
-      Add to Cart{" "}
+      Checkout Now{" "}
     </Button>
   );
 }
